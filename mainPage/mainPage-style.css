@@ -1,0 +1,286 @@
+@charset "UTF-8";
+/* 
+1. Posicionamiento
+2. Modelo caja (Box model)
+3. Tipografía
+4. Visuales
+5. Otros
+*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding-right: 0;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  min-height: 1000px;
+  font-size: 62.5%;
+  font-family: 'Muli', sans-serif;
+}
+
+.justify-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#21c08b), to(#8f57fd));
+  background-image: linear-gradient(#21c08b, #8f57fd);
+  color: white;
+}
+
+.main a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.main-header__img {
+  height: 60px;
+  margin: 20px 0 0 20px;
+}
+
+.main-header__profile {
+  margin: 20px 20px 0px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.main-header__profile:hover ul, .main-header__profile ul:hover {
+  display: block;
+}
+
+.main-header__profile ul {
+  display: none;
+  list-style: none;
+  position: absolute;
+  font-size: 1.2rem;
+  text-align: right;
+  padding: 5px;
+  margin: 0px 0px -110px 14px;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  border-radius: 10px;
+}
+
+.main-header__profile li {
+  margin: 10px 0px;
+}
+
+.main-header__profile li a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-header__profile li a:hover {
+  text-decoration: underline;
+}
+
+.main-header__profile img {
+  width: 40px;
+}
+
+.main-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 700px;
+}
+
+.main-body__title {
+  padding: 30px 0;
+}
+
+.main-body__cardContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow-x: scroll;
+  position: relative;
+  transition: 450ms -webkit-transform;
+  -webkit-transition: 450ms -webkit-transform;
+  transition: 450ms transform;
+  transition: 450ms transform, 450ms -webkit-transform;
+  white-space: nowrap;
+}
+
+.main-body__cardContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.main-body__cardContainer:hover .main-body__cardContainer_card {
+  opacity: 0.3;
+}
+
+.main-body__cardContainer:hover .main-body__cardContainer_card:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+.main-body__cardContainer_card {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 250px;
+  cursor: pointer;
+  -webkit-transition: 450ms all;
+  transition: 450ms all;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+  margin: 100px 0px 100px 15px;
+  background-color: red;
+  border-radius: 15px;
+  font-size: 1.6rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.main-body__cardContainer_card:hover ~ .main-body__cardContainer_card {
+  -webkit-transform: translate3d(100px, 0, 0);
+  transform: translate3d(100px, 0, 0);
+}
+
+.main-body__cardContainer_card img {
+  width: 200px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main-body__input {
+  margin: 15px 10px 5px 0px;
+  border: none;
+  background: none;
+  text-decoration: none;
+  outline: 0;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.main-body__input::-webkit-input-placeholder {
+  color: lightgray;
+  font-size: 2.5rem;
+}
+
+.main-body__input:-ms-input-placeholder {
+  color: lightgray;
+  font-size: 2.5rem;
+}
+
+.main-body__input::-ms-input-placeholder {
+  color: lightgray;
+  font-size: 2.5rem;
+}
+
+.main-body__input::placeholder {
+  color: lightgray;
+  font-size: 2.5rem;
+}
+
+.main-body__button {
+  margin: 30px 10px 15px 10px;
+  padding: 10px;
+  width: 220px;
+  letter-spacing: 1px;
+  font-size: 1.8rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.main-body__checkboxLine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.6rem;
+  margin: 15px 0px;
+}
+
+.main-body__checkboxLine span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.main-body__checkboxLine input {
+  height: 30px;
+  width: 30px;
+}
+
+.main-body__icon {
+  margin: 15px 10px 0px 0px;
+}
+
+.main-body__icon img {
+  width: 25px;
+  margin-right: 4px;
+}
+
+.main-footer {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-footer a {
+  margin: 10px;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: white;
+}
+/*# sourceMappingURL=mainPage-style.css.map */
