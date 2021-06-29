@@ -15,7 +15,7 @@
 
 html {
   width: 100%;
-  min-height: 1000px;
+  min-height: 100%;
   font-size: 62.5%;
   font-family: 'Muli', sans-serif;
 }
@@ -138,6 +138,7 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  overflow: auto;
   position: relative;
   transition: 450ms -webkit-transform;
   -webkit-transition: 450ms -webkit-transform;
@@ -347,7 +348,7 @@ html {
 
 .main-footer a {
   margin: 10px;
-  font-size: 1.6rem;
+  font-size: 2rem;
   text-decoration: none;
   color: white;
 }

@@ -14,8 +14,8 @@
     
 html{
     width: 100%;
-    // height: 100%;
-    min-height: 1000px;
+    min-height: 100%;
+    // min-height: 1000px;
     font-size: 62.5%;
     font-family: 'Muli', sans-serif;
 }
@@ -95,7 +95,7 @@ html{
         &__cardContainer{
             display: flex;
             flex-direction: row;
-            // overflow: auto;
+            overflow: auto;
             position: relative;
 
             transition: 450ms -webkit-transform;
@@ -239,7 +239,7 @@ html{
         align-items: center;
         & a{
             margin: 10px;
-            font-size: 1.6rem;
+            font-size: 2rem;
             text-decoration: none;
             color: white;  
         }

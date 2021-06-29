@@ -15,7 +15,7 @@
 
 html {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   min-height: 1000px;
   font-size: 62.5%;
   font-family: 'Muli', sans-serif;
@@ -55,7 +55,7 @@ html {
 
 .main-header__img {
   height: 60px;
-  margin: 30px 0 70px 30px;
+  margin: 30px 0 10px 30px;
 }
 
 .main-header__profile {
@@ -93,7 +93,6 @@ html {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 60px 68px 40px;
-  margin: 20px;
   width: 500px;
   min-height: 700px;
   border-radius: 40px;
@@ -181,12 +180,18 @@ html {
 }
 
 .main-body__icon {
-  margin: 15px 10px 0px 0px;
+  margin: 5px 10px 0px 0px;
 }
 
 .main-body__icon img {
   width: 25px;
   margin-right: 4px;
+}
+
+.main-body__return {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 30px;
 }
 
 .main-footer {
@@ -201,7 +206,7 @@ html {
 
 .main-footer a {
   margin: 10px;
-  font-size: 1.6rem;
+  font-size: 2rem;
   text-decoration: none;
   color: white;
 }
