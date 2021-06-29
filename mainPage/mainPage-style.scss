@@ -14,7 +14,7 @@
     
 html{
     width: 100%;
-    height: 100%;
+    // height: 100%;
     min-height: 1000px;
     font-size: 62.5%;
     font-family: 'Muli', sans-serif;
@@ -40,8 +40,6 @@ html{
         &__img{
             height: 60px;
             margin: 20px 0 0 20px;
-            // margin-left: 30px;
-            // width: 200px;
         }
         &__profile{
             margin: 20px 20px 0px 0px;
@@ -76,43 +74,36 @@ html{
                 }
             }
             & img {
-                // margin-right: 8px;
                 width: 40px;
             }
         }
     }
+    &-Container{
+        display: flex;
+        max-width: 480px;
+    }
     &-body{
         display: flex;
         flex-direction: column;
-        // justify-content: space-around;
-        // padding: 60px 68px 40px;
-        // margin: 20px;
-        // width: 500px;
         min-height: 700px;
-        // border-radius: 40px;
-        // font-size: 1.6rem;
-        // background-color: rgba(255,255,255,0.1);
-        // box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-        // border: 2px solid white;
+        max-width: 90vw;
 
         &__title{
+            font-size: 3rem;
             padding: 30px 0;
         }
         &__cardContainer{
             display: flex;
             flex-direction: row;
-            overflow-x: scroll;
-
-            // padding-left: 30px;
+            // overflow: auto;
             position: relative;
 
             transition: 450ms -webkit-transform;
             transition: 450ms transform;
             transition: 450ms transform, 450ms -webkit-transform;
-            white-space: nowrap;
-            // padding-bottom: 10px;
             &::-webkit-scrollbar {
-                display: none;
+                width: 0px;
+                background: transparent;
             }
             &:hover &_card {
                 opacity: 0.3;
@@ -123,41 +114,70 @@ html{
                 }    
             }
             &_card{
-                // display: flex;
-                border-radius: 20px;
-                overflow: hidden;
-                position: relative;
-                display: inline-block;
+                display: flex;
+                flex-direction: row;
                 width: 200px;
-                height: 250px;
-                // margin-right: 10px;
-                // font-size: 20px;
+                height: 350px;
                 cursor: pointer;
                 transition: 450ms all;
                 -webkit-transform-origin: center left;
                         transform-origin: center left;
-
-                // width: 150px;
-                // height: 200px;
                 margin: 100px 0px 100px 15px;
-                background-color: red;
-                border-radius: 15px;
                 font-size: 1.6rem;
                 background-color: rgba(255,255,255,0.1);
                 box-shadow: 0 10px 18px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-                // border: 2px solid white;
-                
-
-
                 &:hover ~ & {
                     -webkit-transform: translate3d(100px, 0, 0);
                             transform: translate3d(100px, 0, 0);
                 }
-                & img{
+                &:hover div, &_over:hover{
+                    display: block;
+                }
+                &_cover{
+                    top: 0px;
+                    left: 0px;
+                    position: relative;
                     width: 200px;
-                    height: 250px;
-                    // -o-object-fit: cover;
+                    height: 350px;
                     object-fit: cover;
+                    &:hover {
+                        display: block;
+                    }
+                }
+                & div{
+                    display: none;
+                    position: absolute;
+                    width: 200px;
+                    height: 350px;
+                    transition: 450ms all;
+                    background: linear-gradient(0deg, rgba(0,0,0,0.62) 10%, rgba(255,255,255,0) 100%);
+                }
+                &_over{
+                    display: none;
+                    transition: 450ms all;
+                    position: absolute;
+                    & p{
+                        position: absolute;
+                        top: 250px;
+                        left: 5px;
+                    }
+                    & img{
+                        position: absolute;
+                        height: 35px;
+                        top: 280px;
+                        left: 5px;
+                    }
+                    & span{
+                        display: flex;
+                        flex-direction: row;
+                        position: absolute;
+                        width: 1000px;
+                        top: 320px;
+                        left: 5px;
+                    }
+                    & img:last-of-type{
+                        left: 45px;
+                    }
                 }
             }
         }
@@ -219,7 +239,6 @@ html{
         align-items: center;
         & a{
             margin: 10px;
-            // padding: 20px;
             font-size: 1.6rem;
             text-decoration: none;
             color: white;  
